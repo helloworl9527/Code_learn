@@ -3,7 +3,7 @@ unbuntu20.4
 # 快速使用
 1.crontab -e #编辑定是任务列表  ，第一次运行时需要选择文本编辑器根据自己熟悉的选择即可（nano/vim/ed)
 2.命令格式  
-![image](https://i-blog.csdnimg.cn/blog_migrate/e3405a700e7e1d5e6589d2418537a99f.png)
+[Linux定时任务-Cron表达式详解](https://blog.csdn.net/longgeaisisi/article/details/90400969)
 示例  
 0 2 * * * touch test.text #每天凌晨2点执行touch test.text命令(创建test.text文本文件）  
 ## 注意
