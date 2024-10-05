@@ -5,7 +5,7 @@ unbuntu20.4
 2.命令格式  
 [Linux定时任务-Cron表达式详解](https://blog.csdn.net/longgeaisisi/article/details/90400969)  
 示例  
-0 2 * * * touch test.text #每天凌晨2点执行touch test.text命令(创建test.text文本文件）  
+> 0 2 * * * touch test.text #每天凌晨2点执行touch test.text命令(创建test.text文本文件）  
 ## 注意
 1.如果使用境外服务器需要注意服务器时间是否与你当地时间保持一致  
 2.每次定时运行任务的结果如果创建新文件会默认添加到当前工作目录下
