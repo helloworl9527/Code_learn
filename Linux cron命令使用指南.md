@@ -7,9 +7,15 @@ unbuntu20.4
 示例  
 0 2 * * * touch test.text #每天凌晨2点执行touch test.text命令(创建test.text文本文件）  
 ## 注意
-如果使用境外服务器需要注意服务器时间是否与你当地时间保持一致
+如果使用境外服务器需要注意服务器时间是否与你当地时间保持一致  
+每次定时运行任务的结果如果创建新文件会默认添加到当前工作目录下
+```
+# 打印当前工作目录
+    current_directory = os.getcwd()
+    print("当前工作目录:", current_directory)
 
 # 命令列表
+```
 ```
 安装：apt-get install cron
 启动：service cron start
