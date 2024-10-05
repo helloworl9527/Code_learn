@@ -1,7 +1,7 @@
 unbuntu20.4  
 系统自带cron  
 # 快速使用
-1.crontab -e #编辑定是任务列表  ，第一次运行时需要选择文本编辑器根据自己熟悉的选择即可（nano/vim/ed)  
+1.`crontab -e` #编辑定是任务列表  ，第一次运行时需要选择文本编辑器根据自己熟悉的选择即可（nano/vim/ed)  
 2.命令格式  
 [Linux定时任务-Cron表达式详解](https://blog.csdn.net/longgeaisisi/article/details/90400969)  
 示例  
