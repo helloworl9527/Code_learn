@@ -33,3 +33,57 @@ except requests.RequestException as e:
 ```
 服务端代码
 ```
+from flask import Flask, request, jsonify
+import secrets  # for generating session IDs
+
+app = Flask(__name__)
+
+@app.route('/login', methods=['POST'])
+def login():
+    try:
+        # Get data from request
+        data = request.json
+        username = data.get('username')
+        password = data.get('password')
+        code = data.get('code')
+
+        # Validate required fields
+        if not all([username, password, code]):
+            return jsonify({
+                'error': 'Missing required fields'
+            }), 400
+
+        # Here you would typically:
+        # 1. Verify the WeChat code with WeChat's server
+        # 2. Validate username and password against your database
+        # 3. Create a session for the user
+
+        # For demonstration, we'll just check hardcoded values
+        if username == 'zhangsan' and password == 'pwd123456':
+            # Generate a session ID
+            session_id = secrets.token_urlsafe(16)
+            
+            return jsonify({
+                'statusCode': 200,
+                'sessionId': session_id,
+                'message': 'Login successful'
+            }), 200
+        else:
+            return jsonify({
+                'statusCode': 401,
+                'error': 'Invalid credentials'
+            }), 401
+
+    except Exception as e:
+        return jsonify({
+            'statusCode': 500,
+            'error': str(e)
+        }), 500
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+```
+问题：
+1.本地测试运行代码时，出现以下错误  
+- 请求失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+此时服务器端口3000已经打开（在命令行操作打开），但只打开了操作系统内部的端口，还需要在云服务器操作界面，配置防火墙规则，同样打开3000端口，才能正常通过本地测试访问。
