@@ -3,6 +3,7 @@
 
 <p>下载：
 <a href='https://www.centos.org/download/'>CentOS</a>
+<a href='https://mirrors.aliyun.com/centos-stream/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-dvd1.iso'>阿里云镜像下载</a>
 <a href='https://sysin.org/blog/vmware-fusion-13/'>Vmware Fusion</a>
 </p>
 
