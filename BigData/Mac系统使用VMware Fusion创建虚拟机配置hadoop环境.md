@@ -13,3 +13,5 @@
 
 ---
 >[Mac VMware Fusion安装CentOS 7](https://blog.csdn.net/vbirdbest/article/details/107375067)
+>[Mac M1 Vmware Fuison 安装 CentOS Bilbil](【https://www.bilibili.com/video/BV1XW4y1y7zv?vd_source=afbdaebbd5c69c97785bec729004fceb) 
+
