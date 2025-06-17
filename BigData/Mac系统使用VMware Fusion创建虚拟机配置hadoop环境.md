@@ -8,7 +8,7 @@
 </p>
 
 # 二、配置Hadoop伪分布式集群
-<p>配置ssh免密登陆（使用Termius连接)</p>
+<p>配置ssh免密登陆（使用<a href='termius.com'>Termius连接</a>)</p>
 
 
 
