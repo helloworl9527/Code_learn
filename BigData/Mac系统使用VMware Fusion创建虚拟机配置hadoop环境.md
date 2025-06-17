@@ -30,6 +30,17 @@ PasswordAuthentication yes   # 允许密码认证（临时启用）<br>
 <br>
 sudo tar -zxvf hadoop-3.2.0.tar.gz -C /usr/local/ #解压到指定目录
 <br>
+mkdir 文件名 #创建新的文件夹
+<br>
+rm -r 文件夹名 #删除文件夹（文件夹中每个文件需确认）
+<br>
+rm -rf 文件夹名 (递归删除不进行确认)
+<br>
+rm -f 文件名 #删除文件
+<br>
+
+
+
 
 
 
