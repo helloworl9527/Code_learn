@@ -7,7 +7,8 @@
 <a href='https://sysin.org/blog/vmware-fusion-13/'>Vmware Fusion</a>
 </p>
 
-
+# 二、配置Hadoop伪分布式集群
+<p>配置ssh免密登陆（使用Termius连接)</p>
 
 
 
