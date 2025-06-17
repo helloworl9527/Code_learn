@@ -23,6 +23,9 @@ PubkeyAuthentication yes     # 启用公钥认证   <br>
 PasswordAuthentication yes   # 允许密码认证（临时启用）<br>
 <p>systemctl restart sshd #保存后重启ssh</p>
 
+## 下载hadoop
+wget https://archive.apache.org/dist/hadoop/common/hadoop-3.2.0/hadoop-3.2.0.tar.gz.sha256sha256sum -c hadoop-3.2.0.tar.gz.sha2561
+
 ---
 >[Mac VMware Fusion安装CentOS 7](https://blog.csdn.net/vbirdbest/article/details/107375067)  
 >[Mac M1 Vmware Fuison 安装 CentOS Bilbil](https://www.bilibili.com/video/BV1XW4y1y7zv?vd_source=afbdaebbd5c69c97785bec729004fceb) 
