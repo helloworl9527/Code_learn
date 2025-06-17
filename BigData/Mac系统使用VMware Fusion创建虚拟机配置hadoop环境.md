@@ -31,6 +31,11 @@ PubkeyAuthentication yes     # 启用公钥认证   <br>
 PasswordAuthentication yes   # 允许密码认证（临时启用）<br>
 <p>systemctl restart sshd #保存后重启ssh</p>
 
+### 3.localhost: root@localhost: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).
+<p>之前的ssh未正确配置,配置成功输入ssh localhost后无需输入密码直接登陆</p>
+ls ~/.ssh/id_rsa.pub #检查是否有ssh密钥<br>ssh-keygen -t rsa -P ""   # 全程回车即可（如果没有）<br>cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys<br>chmod 600 ~/.ssh/authorized_keys #添加公钥到 authorized_keys<br>chmod 700 ~/.ssh #设置 .ssh 目录权限
+
+
 ## 下载hadoop
 下载 wget https://archive.apache.org/dist/hadoop/common/hadoop-3.2.0/hadoop-3.2.0.tar.gz.sha256sha256sum -c hadoop-3.2.0.tar.gz.sha2561
 <br>
