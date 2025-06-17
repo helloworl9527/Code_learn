@@ -2,6 +2,8 @@
 <p><Strong>M系列芯片下载arrch64架构的镜像</Strong></p>
 <p>/usr/export存放软件压缩包</p>
 <p>/usr/local/存放软件</p>
+<p>hadoop目录:/usr/local/hadoop3.2/hadoop-3.2.0</p>
+<p>java:/usr/local/java/jdk8u362-b09</p>
 
 <p>下载：
 <a href='https://www.centos.org/download/'>CentOS</a>
