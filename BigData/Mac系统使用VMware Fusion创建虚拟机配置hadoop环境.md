@@ -5,6 +5,8 @@
 <p>hadoop目录:/usr/local/hadoop3.2/hadoop-3.2.0</p>
 <p>java:/usr/local/java/jdk8u362-b09</p>
 <p>hadoop日志:/usr/local/hadoop3.2/hadoop_log/data/hadoop_repo/logs/hadoop</p>
+<p>hadoop配置文件目录:/usr/local/hadoop3.2/hadoop-3.2.0/etc/hadoop</p>
+
 
 
 <p>下载：
