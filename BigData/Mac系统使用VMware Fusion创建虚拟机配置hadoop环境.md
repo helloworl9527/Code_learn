@@ -1,5 +1,7 @@
 # 一、安装虚拟机软件及下载对应iso文件
 <p><Strong>M系列芯片下载arrch64架构的镜像</Strong></p>
+<p>/usr/export存放软件压缩包</p>
+<p>/usr/local/存放软件</p>
 
 <p>下载：
 <a href='https://www.centos.org/download/'>CentOS</a>
@@ -24,7 +26,12 @@ PasswordAuthentication yes   # 允许密码认证（临时启用）<br>
 <p>systemctl restart sshd #保存后重启ssh</p>
 
 ## 下载hadoop
-wget https://archive.apache.org/dist/hadoop/common/hadoop-3.2.0/hadoop-3.2.0.tar.gz.sha256sha256sum -c hadoop-3.2.0.tar.gz.sha2561
+下载 wget https://archive.apache.org/dist/hadoop/common/hadoop-3.2.0/hadoop-3.2.0.tar.gz.sha256sha256sum -c hadoop-3.2.0.tar.gz.sha2561
+<br>
+sudo tar -zxvf hadoop-3.2.0.tar.gz -C /usr/local/ #解压到指定目录
+<br>
+
+
 
 ---
 >[Mac VMware Fusion安装CentOS 7](https://blog.csdn.net/vbirdbest/article/details/107375067)  
