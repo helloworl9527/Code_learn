@@ -4,6 +4,8 @@
 <p>/usr/local/存放软件</p>
 <p>hadoop目录:/usr/local/hadoop3.2/hadoop-3.2.0</p>
 <p>java:/usr/local/java/jdk8u362-b09</p>
+<p>hadoop日志:/usr/local/hadoop3.2/hadoop_log/data/hadoop_repo/logs/hadoop</p>
+
 
 <p>下载：
 <a href='https://www.centos.org/download/'>CentOS</a>
@@ -39,6 +41,8 @@ rm -r 文件夹名 #删除文件夹（文件夹中每个文件需确认）
 rm -rf 文件夹名 (递归删除不进行确认)
 <br>
 rm -f 文件名 #删除文件
+<br>
+pwd #获取当前目录
 <br>
 
 
