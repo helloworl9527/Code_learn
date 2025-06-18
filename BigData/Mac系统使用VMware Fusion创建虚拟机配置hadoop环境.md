@@ -1,6 +1,10 @@
 Hadoop:3.2<br>
 Hive:4.0<br>
 mysql:8.0<br>
+Mac book air M1芯片的Apple电脑<br>
+使用VMware Fusion 虚拟机中安装的Centos9arrch64版本<br>
+
+
 
 <p>配置目录信息</p>
 <p>/usr/export存放软件压缩包</p>
@@ -10,10 +14,22 @@ mysql:8.0<br>
 <p>hadoop日志:/usr/local/hadoop3.2/hadoop_log/data/hadoop_repo/logs/hadoop</p>
 <p>hadoop配置文件目录:/usr/local/hadoop3.2/hadoop-3.2.0/etc/hadoop</p>
 <p>Idea启动目录:/home/cyh/下载/idea-IC-251.26094.121/bin  启动./idea.sh</p>
-<p>mysql密码：MyPass123! 启动mysql:mysql -u root -p</p>
+
+<br>
+<p>mysql<br>
+密码：MyPass123! <br>
+mysql:mysql -u root -p #登陆mysql <br>
+systemctl start mysqld #启动mysql <br>
+systemctl status mysql #检查mysql状态 <br>
+</p>
+<br>
+
 <p>Hive安装目录：/usr/local/Hive/apache-hive-4.0.1-bin</p>
 <p>
 启动idea:cd /home/cyh/下载/idea-IU-251.26094.121/bin  ./idea.sh
+</p>
+<p>sudo vi /etc/profile #配置环境变量<br>
+source /etc/profile #使生效
 </p>
 <br>
 
@@ -76,6 +92,45 @@ pwd #获取当前目录
 <p>Maven配置启动？</p>
 ---
 ## 四、下载配置Hive
+<p>安装mysql(手动安装）</p>
+<p>mysql JDBC驱动包需单独下载</p>
+<p>登陆mysql时使用生成的临时密码无法登陆解决：<br>
+
+```
+sudo systemctl stop mysqld
+sudo -u mysql mysqld --skip-grant-tables --skip-networking & #使用 mysql 用户身份启动
+mysql -u root #无密码登陆
+ALTER USER 'root'@'localhost' IDENTIFIED BY '新密码'; #重置密码
+
+
+```
+<p>
+ERROR 1290 (HY000): The MySQL server is running with the --skip-grant-tables option so it cannot execute this statement <br>
+在 --skip-grant-tables 模式下运行 MySQL，该模式会禁用权限系统，导致无法执行 ALTER USER 这类需要权限验证的操作 <br>
+```
+FLUSH PRIVILEGES; #刷新权限表
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass123!'; #修改密码
+```
+</p>
+</p>
+
+### 启动Hive
+
+```
+schematool -dbType mysql -initSchema
+Could not create connection to database server. #Hive 在初始化元数据库时无法连接到 MySQL
+```
+<p>MySQL 8.0+：需使用 mysql-connector-java-8.0.xx.jar</p>
+<p>beeline> !connect jdbc:hive2://localhost:10000  #使用该命令前需启动HiveServer2 (HS2)</p>
+
+```
+Hive Session ID = 47b1bfb0-0b47-4c0d-8c52-77e46b6b31d6
+Hive Session ID = 242ef03b-5dca-4149-b904-de351d236969
+Hive Session ID = c15dcafd-3f45-467f-889f-693c31650d98
+Hive Session ID = 8a78a138-5228-4b33-a684-7ecb2e0bd2c6
+Hive Session ID = b5d38c85-43ff-41ff-bc1d-e06ee278a497
+#出现了 SLF4J 日志绑定冲突
+```
 
 
 ---
