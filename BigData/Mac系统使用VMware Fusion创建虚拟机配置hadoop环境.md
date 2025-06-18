@@ -19,7 +19,7 @@ mysql:8.0<br>
 <br>
 ./idea.sh
 </p>
-
+1
 <br>
 <br>
 <br>
@@ -80,7 +80,7 @@ pwd #获取当前目录
 
 ---
 >[Mac VMware Fusion安装CentOS 7](https://blog.csdn.net/vbirdbest/article/details/107375067)  
->[Mac M1 Vmware Fuison 安装 CentOS Bilbil](https://www.bilibili.com/video/BV1XW4y1y7zv?vd_source=afbdaebbd5c69c97785bec729004fceb)
->[在 IntelliJ IDEA 中使用 Hadoop](https://blog.csdn.net/shenpkun/article/details/130295946?fromshare=blogdetail&sharetype=blogdetail&sharerId=130295946&sharerefer=PC&sharesource=2301_76146126&sharefrom=from_link)
+>[Mac M1 Vmware Fuison 安装 CentOS Bilbil](https://www.bilibili.com/video/BV1XW4y1y7zv?vd_source=afbdaebbd5c69c97785bec729004fceb)  
+>[在 IntelliJ IDEA 中使用 Hadoop](https://blog.csdn.net/shenpkun/article/details/130295946?fromshare=blogdetail&sharetype=blogdetail&sharerId=130295946&sharerefer=PC&sharesource=2301_76146126&sharefrom=from_link)  
 >[idea安装过程参考](https://blog.csdn.net/hang_sugar/article/details/127331445)
 
