@@ -24,10 +24,21 @@ systemctl status mysql #检查mysql状态 <br>
 </p>
 <br>
 
-<p>Hive安装目录：/usr/local/Hive/apache-hive-4.0.1-bin</p>
+<p>
+  Hive安装目录：/usr/local/Hive/apache-hive-4.0.1-bin <br>
+  启动Hive：
+  nohup hive --service metastore \ <br>
+  > metastore.log 2>&1 & #后台启动 <br>
+  netstat -tnlp | grep 9083 # 应看到: LISTEN 0.0.0.0:9083/java <br>
+  nohup hive --service hiveserver2 \ <br>
+  > hiveserver2.log 2>&1 & ##后台启动Hiveserver2 <br>
+  netstat -tnlp | grep 10000  # 应看到: LISTEN 0.0.0.0:10000/java <br>
+  beeline -u jdbc:hive2://127.0.0.1:10000 -n hiveuser -p 'Hive123@!' #使用 Beeline 连接并验证
+</p>
 <p>
 启动idea:cd /home/cyh/下载/idea-IU-251.26094.121/bin  ./idea.sh
 </p>
+
 <p>sudo vi /etc/profile #配置环境变量<br>
 source /etc/profile #使生效
 </p>
@@ -68,6 +79,21 @@ ls ~/.ssh/id_rsa.pub #检查是否有ssh密钥<br>ssh-keygen -t rsa -P ""   # �
 ### 4.sbin/start-all.sh:行57: /usr/local/hadoop3.2/hadoop-3.2.0/sbin/start-dfs.sh: 权限不够
 说明start-dfs.sh 脚本没有执行权限，即使是root<br>chmod +x /你的hadoop目录/sbin/start-dfs.sh  #添加执行权限
 
+### 5.HiveServer2不能成功启动
+<p>
+  是因为Metastore没有成功启动.
+  Metastore不能成功启动是没有正确连接mysql
+</p>
+<p>
+  netstat -tnlp | grep 10000 #如果有结果说明 HiveServer2 正常监听 
+  nohup hive --service metastore > metastore.log 2>&1 & #先启动 metastore
+  netstat -tnlp | grep 9083 #确认 metastore #netstat -tnlp | grep 9083`` 若无输出，说明 metastore 启动失败或未监听端口
+
+  错误原因:Hive Metastore 正在尝试连接 MySQL 数据库，但连接被拒绝
+  mysql增加hiveuser用户权限
+  nohup hive --service metastore > metastore.log 2>&1 & #重启 metastore
+
+</p>
 
 ## 下载hadoop
 下载 wget https://archive.apache.org/dist/hadoop/common/hadoop-3.2.0/hadoop-3.2.0.tar.gz.sha256sha256sum -c hadoop-3.2.0.tar.gz.sha2561
@@ -132,6 +158,36 @@ Hive Session ID = b5d38c85-43ff-41ff-bc1d-e06ee278a497
 #出现了 SLF4J 日志绑定冲突
 ```
 
+<p>Hive hive-sit.xml数据库部分配置</p>
+
+
+```
+<!-- 数据库 start -->
+    <property>
+      <name>javax.jdo.option.ConnectionURL</name>
+      <value>jdbc:mysql://localhost:3306/hive_meta?createDatabaseIfNotExist=true&amp;serverTimezone=UTC&amp;useSSL=false</value>
+      <description>mysql连接</description>
+    </property>
+
+    <property>
+      <name>javax.jdo.option.ConnectionDriverName</name>
+      <value>com.mysql.cj.jdbc.Driver</value>
+      <description>mysql驱动</description>
+    </property>
+
+    <property>
+      <name>javax.jdo.option.ConnectionUserName</name>
+      <value>hiveuser</value>
+      <description>数据库使用用户名</description>
+    </property>
+
+    <property>
+      <name>javax.jdo.option.ConnectionPassword</name>
+      <value>Hive123@!</value>
+      <description>数据库密码</description>
+    </property>
+    <!-- 数据库 end -->
+```
 
 ---
 >[Mac VMware Fusion安装CentOS 7](https://blog.csdn.net/vbirdbest/article/details/107375067)  
