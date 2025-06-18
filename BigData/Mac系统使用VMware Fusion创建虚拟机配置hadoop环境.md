@@ -70,13 +70,17 @@ pwd #获取当前目录
 <br>
 
 ## 三、配置idea环境（hadoop)
-爱我的
 ### 下载Idea
+<p>一定要在官网下载Ultimate版本，可免费试用30天，用来做实验够用了。不然后边下载不了插件</p>
+<p>然后在Idea中配置Hadoop时候注意要先启动hadoop集群测试连接才能成功</p>
 
-### 
+
+## 四、下载配置Hive
 
 
 ---
 >[Mac VMware Fusion安装CentOS 7](https://blog.csdn.net/vbirdbest/article/details/107375067)  
->[Mac M1 Vmware Fuison 安装 CentOS Bilbil](https://www.bilibili.com/video/BV1XW4y1y7zv?vd_source=afbdaebbd5c69c97785bec729004fceb) 
+>[Mac M1 Vmware Fuison 安装 CentOS Bilbil](https://www.bilibili.com/video/BV1XW4y1y7zv?vd_source=afbdaebbd5c69c97785bec729004fceb)
+>[在 IntelliJ IDEA 中使用 Hadoop](https://blog.csdn.net/shenpkun/article/details/130295946?fromshare=blogdetail&sharetype=blogdetail&sharerId=130295946&sharerefer=PC&sharesource=2301_76146126&sharefrom=from_link)
+>[idea安装过程参考](https://blog.csdn.net/hang_sugar/article/details/127331445)
 
