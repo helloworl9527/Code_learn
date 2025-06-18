@@ -2,9 +2,7 @@ Hadoop:3.2<br>
 Hive:4.0<br>
 mysql:8.0<br>
 
-
-# 一、安装虚拟机软件及下载对应iso文件
-<p><Strong>M系列芯片下载arrch64架构的镜像</Strong></p>
+<p>配置目录信息</p>
 <p>/usr/export存放软件压缩包</p>
 <p>/usr/local/存放软件</p>
 <p>hadoop目录:/usr/local/hadoop3.2/hadoop-3.2.0   启动：./sbin/start-all.sh</p>a
@@ -15,11 +13,13 @@ mysql:8.0<br>
 <p>mysql密码：MyPass123! 启动mysql:mysql -u root -p</p>
 <p>Hive安装目录：/usr/local/Hive/apache-hive-4.0.1-bin</p>
 <p>
-启动idea:cd /home/cyh/下载/idea-IU-251.26094.121/bin
-<br>
-./idea.sh
+启动idea:cd /home/cyh/下载/idea-IU-251.26094.121/bin  ./idea.sh
 </p>
-1
+<br>
+
+---
+# 一、安装虚拟机软件及下载对应iso文件
+<p><Strong>M系列芯片下载arrch64架构的镜像</Strong></p>
 <br>
 <br>
 <br>
@@ -73,8 +73,8 @@ pwd #获取当前目录
 ### 下载Idea
 <p>一定要在官网下载Ultimate版本，可免费试用30天，用来做实验够用了。不然后边下载不了插件</p>
 <p>然后在Idea中配置Hadoop时候注意要先启动hadoop集群测试连接才能成功</p>
-
-
+<p>Maven配置启动？</p>
+---
 ## 四、下载配置Hive
 
 
