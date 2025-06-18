@@ -1,6 +1,6 @@
-Hadoop:3.2
-Hive:4.0
-mysql:8.0
+Hadoop:3.2<br>
+Hive:4.0<br>
+mysql:8.0<br>
 
 
 # 一、安装虚拟机软件及下载对应iso文件
@@ -14,6 +14,15 @@ mysql:8.0
 <p>Idea启动目录:/home/cyh/下载/idea-IC-251.26094.121/bin  启动./idea.sh</p>
 <p>mysql密码：MyPass123! 启动mysql:mysql -u root -p</p>
 <p>Hive安装目录：/usr/local/Hive/apache-hive-4.0.1-bin</p>
+<p>
+启动idea:cd /home/cyh/下载/idea-IU-251.26094.121/bin
+<br>
+./idea.sh
+</p>
+
+<br>
+<br>
+<br>
 <p>下载：
 <a href='https://www.centos.org/download/'>CentOS</a>
 <a href='https://mirrors.aliyun.com/centos-stream/9-stream/BaseOS/x86_64/iso/CentOS-Stream-9-latest-x86_64-dvd1.iso'>阿里云镜像下载</a>
