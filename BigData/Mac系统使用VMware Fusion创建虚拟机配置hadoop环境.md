@@ -37,8 +37,7 @@ systemctl status mysql #检查mysql状态 <br>
   nohup hive --service metastore \ <br>
   > metastore.log 2>&1 & #后台启动 <br>
   netstat -tnlp | grep 9083 # 应看到: LISTEN 0.0.0.0:9083/java <br>
-  nohup hive --service hiveserver2 \ <br>
-  > hiveserver2.log 2>&1 & ##后台启动Hiveserver2 <br>
+  nohup hive --service hiveserver2 > hiveserver2.log 2>&1 & #启动Hiveserver2（等待10s左右） <br>
   netstat -tnlp | grep 10000  # 应看到: LISTEN 0.0.0.0:10000/java <br>
   beeline -u jdbc:hive2://127.0.0.1:10000 -n hiveuser -p 'Hive123@!' #使用 Beeline 连接并验证
 </p>
