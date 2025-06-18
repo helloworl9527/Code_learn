@@ -6,7 +6,7 @@
 <p>java:/usr/local/java/jdk8u362-b09</p>
 <p>hadoop日志:/usr/local/hadoop3.2/hadoop_log/data/hadoop_repo/logs/hadoop</p>
 <p>hadoop配置文件目录:/usr/local/hadoop3.2/hadoop-3.2.0/etc/hadoop</p>
-
+<p>Idea启动目录:/home/cyh/下载/idea-IC-251.26094.121/bin  启动./idea.sh</p>
 
 
 <p>下载：
@@ -55,9 +55,11 @@ rm -f 文件名 #删除文件
 pwd #获取当前目录
 <br>
 
+## 配置idea环境（hadoop)
+爱我的
+### 下载Idea
 
-
-
+### 
 
 
 ---
