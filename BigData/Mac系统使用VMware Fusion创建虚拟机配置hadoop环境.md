@@ -1,8 +1,13 @@
+Hadoop:3.2
+Hive:4.0
+mysql:8.0
+
+
 # 一、安装虚拟机软件及下载对应iso文件
 <p><Strong>M系列芯片下载arrch64架构的镜像</Strong></p>
 <p>/usr/export存放软件压缩包</p>
 <p>/usr/local/存放软件</p>
-<p>hadoop目录:/usr/local/hadoop3.2/hadoop-3.2.0   启动：./sbin/start-all.sh</p>
+<p>hadoop目录:/usr/local/hadoop3.2/hadoop-3.2.0   启动：./sbin/start-all.sh</p>a
 <p>java:/usr/local/java/jdk8u362-b09</p>
 <p>hadoop日志:/usr/local/hadoop3.2/hadoop_log/data/hadoop_repo/logs/hadoop</p>
 <p>hadoop配置文件目录:/usr/local/hadoop3.2/hadoop-3.2.0/etc/hadoop</p>
