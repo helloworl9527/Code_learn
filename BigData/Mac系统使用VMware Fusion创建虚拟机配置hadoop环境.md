@@ -55,7 +55,7 @@ rm -f 文件名 #删除文件
 pwd #获取当前目录
 <br>
 
-## 配置idea环境（hadoop)
+## 三、配置idea环境（hadoop)
 爱我的
 ### 下载Idea
 
