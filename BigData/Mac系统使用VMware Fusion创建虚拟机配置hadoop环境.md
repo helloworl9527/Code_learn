@@ -39,7 +39,7 @@ systemctl status mysql #检查mysql状态 <br>
   netstat -tnlp | grep 9083 # 应看到: LISTEN 0.0.0.0:9083/java <br>
   nohup hive --service hiveserver2 > hiveserver2.log 2>&1 & #启动Hiveserver2（等待10s左右） <br>
   netstat -tnlp | grep 10000  # 应看到: LISTEN 0.0.0.0:10000/java <br>
-  beeline -u jdbc:hive2://127.0.0.1:10000 -n hiveuser -p 'Hive123@!' #使用 Beeline 连接并验证
+  beeline -u jdbc:hive2://192.168.118.128:10000 -n hiveuser #使用 Beeline 连接并验证
 </p>
 <p>
 启动idea:cd /home/cyh/下载/idea-IU-251.26094.121/bin  ./idea.sh
