@@ -14,7 +14,14 @@ Mac book air M1芯片的Apple电脑<br>
 <p>hadoop日志:/usr/local/hadoop3.2/hadoop_log/data/hadoop_repo/logs/hadoop</p>
 <p>hadoop配置文件目录:/usr/local/hadoop3.2/hadoop-3.2.0/etc/hadoop</p>
 <p>Idea启动目录:/home/cyh/下载/idea-IC-251.26094.121/bin  启动./idea.sh</p>
-
+<p>
+  Spark安装目录：/usr/local/Spark/spark-3.5.6-bin-hadoop3 <br>
+  启动集群:sbin/start-all.sh
+  启动shell: <br>
+  spark-shell --master local #单机模式 <br>
+  spark-shell --master spark://虚拟机IP:7077 #Standalone模式  <br>
+  spark-shell --master yarn #YARN模式启动Spark Shell终端（别忘了启动Hadoop）  <br>
+</p>
 <br>
 <p>mysql<br>
 密码：MyPass123! <br>
