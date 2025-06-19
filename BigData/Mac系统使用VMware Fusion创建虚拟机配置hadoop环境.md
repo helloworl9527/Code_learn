@@ -13,7 +13,7 @@ Mac book air M1芯片的Apple电脑<br>
 <p>java:/usr/local/java/jdk8u362-b09</p>
 <p>hadoop日志:/usr/local/hadoop3.2/hadoop_log/data/hadoop_repo/logs/hadoop</p>
 <p>hadoop配置文件目录:/usr/local/hadoop3.2/hadoop-3.2.0/etc/hadoop</p>
-<p>Idea启动目录:/home/cyh/下载/idea-IC-251.26094.121/bin  启动./idea.sh</p>
+<p>Idea启动目录:/home/cyh/下载/idea-IU-251.26094.121/bin  启动./idea.sh</p>
 <p>
   Spark安装目录：/usr/local/Spark/spark-3.5.6-bin-hadoop3 <br>
   启动集群:sbin/start-all.sh
