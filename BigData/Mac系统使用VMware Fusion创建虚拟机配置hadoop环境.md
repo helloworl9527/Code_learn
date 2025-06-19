@@ -194,6 +194,12 @@ Hive Session ID = b5d38c85-43ff-41ff-bc1d-e06ee278a497
     </property>
     <!-- 数据库 end -->
 ```
+### 配置Spark
+<p>
+  启动spqrk-sql：cd $SPARK_HOME ./bin/spark-sql 
+  
+</p>
+
 
 ---
 >[Mac VMware Fusion安装CentOS 7](https://blog.csdn.net/vbirdbest/article/details/107375067)  
